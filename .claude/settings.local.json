@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/api/sentences/due)",
+      "Bash(curl -s -X POST http://localhost:3000/api/sentences -H \"Content-Type: application/json\" -d \"{\"\"chinese\"\":\"\"我们需要在今天结束前再确认一下\"\",\"\"english\"\":\"\"We need to circle back on this before EOD.\"\",\"\"source\"\":\"\"测试\"\"}\")",
+      "Bash(curl -s -X DELETE http://localhost:3000/api/sentences/4d28863a-ad6d-4689-9ca8-29bba4ecb479)"
+    ]
+  }
+}

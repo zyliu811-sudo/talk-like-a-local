@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk Like a Local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Talk Like a Local</h1>
+  <div class="export-wrap">
+    <button class="export-btn" id="exportToggle">导出数据 ▾</button>
+    <div class="export-menu" id="exportMenu">
+      <a href="/api/export/json">导出 JSON</a>
+      <a href="/api/export/csv">导出 CSV（Excel）</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#" class="active" data-tab="review">
+    今日复习 <span class="badge" id="dueBadge">0</span>
+  </a>
+  <a href="#" data-tab="add">添加句子</a>
+  <a href="#" data-tab="all">
+    全部句子 <span class="badge" id="allBadge">0</span>
+  </a>
+</nav>
+
+<main>
+
+  <!-- 今日复习 -->
+  <section id="tab-review" class="active">
+    <div class="section-header">
+      <h2>今日复习</h2>
+      <span class="count" id="reviewCount"></span>
+    </div>
+    <div id="reviewList"></div>
+  </section>
+
+  <!-- 添加句子 -->
+  <section id="tab-add">
+    <div class="section-header">
+      <h2>添加句子</h2>
+    </div>
+    <div class="card" style="padding: 20px;">
+      <form id="addForm">
+        <div class="form-group">
+          <label>中文句子 <span style="color:#c0392b">*</span></label>
+          <textarea id="f-chinese" placeholder="输入中文意思或场景描述…" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>英文句子 <span style="color:#c0392b">*</span></label>
+          <textarea id="f-english" placeholder="输入对应的英文表达…" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>视频链接（可选）</label>
+          <input type="text" id="f-source-url" placeholder="粘贴 YouTube 链接…">
+        </div>
+        <div class="form-group">
+          <label>时间戳（可选）</label>
+          <input type="text" id="f-source-ts" placeholder="例如 2:30 或 1:02:45">
+        </div>
+        <div class="form-group">
+          <label>关键词汇（可选，每行一个）</label>
+          <textarea id="f-keywords" placeholder="circle back: 回头再讨论&#10;EOD: 下班前&#10;loop in（不加释义也可以）" style="min-height:90px"></textarea>
+        </div>
+        <div class="form-footer">
+          <button type="submit" class="btn btn-primary">添加句子</button>
+          <span class="form-notice" id="addNotice">已添加 ✓</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 全部句子 -->
+  <section id="tab-all">
+    <div class="section-header">
+      <h2>全部句子</h2>
+      <span class="count" id="allCount"></span>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="搜索中文或英文…">
+    </div>
+    <div id="allList"></div>
+  </section>
+
+</main>
+
+<script src="app.js?v=5"></script>
+</body>
+</html>
