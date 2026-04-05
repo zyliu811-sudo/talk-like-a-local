@@ -1,5 +1,37 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Auth overlay ── */
+#authOverlay {
+  position: fixed; inset: 0; background: #f4f5f7;
+  display: flex; align-items: center; justify-content: center; z-index: 999;
+}
+.auth-box {
+  background: #fff; border: 1px solid #dde1e7; border-radius: 6px;
+  padding: 36px 32px; width: 360px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.auth-title { font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 24px; text-align: center; }
+.auth-error {
+  background: #fdf2f2; border: 1px solid #e8b4b4; color: #c0392b;
+  border-radius: 3px; padding: 8px 12px; font-size: 13px; margin-bottom: 14px;
+}
+.auth-actions { display: flex; gap: 10px; margin-top: 6px; }
+.auth-actions .btn { flex: 1; padding: 8px; }
+.btn-secondary {
+  background: none; border: 1px solid #dde1e7; color: #2c3e50;
+  border-radius: 3px; font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.btn-secondary:hover { background: #f4f5f7; }
+.auth-tip { margin-top: 12px; font-size: 12px; color: #27ae60; text-align: center; min-height: 18px; }
+
+/* ── Header right ── */
+.header-right { display: flex; align-items: center; gap: 12px; }
+.user-email { color: #bdc3c7; font-size: 12px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.logout-btn {
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+  color: #ecf0f1; padding: 4px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; font-family: inherit;
+}
+.logout-btn:hover { background: rgba(255,255,255,0.2); }
+
 :root {
   --bg-page:    #f4f5f7;
   --bg-card:    #ffffff;
