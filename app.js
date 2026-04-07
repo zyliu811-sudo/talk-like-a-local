@@ -162,7 +162,7 @@
         } else { html += escHtml(url); }
       } catch(e) { html += escHtml(url); }
     }
-    if (ts) html += (html?' ':') + '<span class="source-ts">'+escHtml(ts)+'</span>';
+    if (ts) html += (html ? ' ' : '') + '<span class="source-ts">'+escHtml(ts)+'</span>';
     return html;
   }
 
