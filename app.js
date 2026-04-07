@@ -2,8 +2,8 @@
   'use strict';
 
   // ── 填入你的 Supabase 配置 ─────────────────────────────────────────────────
-  var SUPABASE_URL = 'YOUR_SUPABASE_URL';
-  var SUPABASE_KEY = 'YOUR_SUPABASE_ANON_KEY';
+  var SUPABASE_URL = 'https://bqcnhsleaoicyodtqkpt.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJxY25oc2xlYW9pY3lvZHRxa3B0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NTY3MTQsImV4cCI6MjA5MTEzMjcxNH0.ofs4x7-TTTq_j-jdskoKjWdJnH4662jpl92M7B7OlvI';
   // ──────────────────────────────────────────────────────────────────────────
 
   var sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
